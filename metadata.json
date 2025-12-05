@@ -1,0 +1,5 @@
+{
+  "name": "TN Bus Sim: Web Cockpit",
+  "description": "A web-based simulator dashboard for the Tamil Nadu Bus Simulator, featuring manual gear logic, Tamil localization, and AI-powered conductor interactions.",
+  "requestFramePermissions": []
+}
