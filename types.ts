@@ -1,7 +1,9 @@
+
 export enum GameMode {
   MENU = 'MENU',
   SELECTION = 'SELECTION',
-  DRIVING = 'DRIVING'
+  DRIVING = 'DRIVING',
+  SUMMARY = 'SUMMARY'
 }
 
 export enum BusMode {
@@ -33,6 +35,8 @@ export interface BusState {
   rpm: number;
   gear: Gear;
   isEngineOn: boolean;
+  isCranking: boolean; 
+  isSputtering: boolean; // New: Engine shutdown shake
   fuel: number;
   temperature: number;
   odometer: number;
@@ -47,10 +51,14 @@ export interface SimulationEvent {
   timestamp: number;
 }
 
-export const TN_CITIES = [
-  "Nagercoil", "Tirunelveli", "Madurai", "Trichy", "Chennai", "Coimbatore", "Pollachi"
+export const TN_DISTRICTS = [
+  "Ariyalur", "Chengalpattu", "Chennai", "Coimbatore", "Cuddalore", "Dharmapuri", "Dindigul", "Erode", "Kallakurichi",
+  "Kanchipuram", "Kanyakumari", "Karur", "Krishnagiri", "Madurai", "Mayiladuthurai", "Nagapattinam", "Namakkal",
+  "Nilgiris", "Perambalur", "Pudukkottai", "Ramanathapuram", "Ranipet", "Salem", "Sivaganga", "Tenkasi", "Thanjavur",
+  "Theni", "Thoothukudi", "Tiruchirappalli", "Tirunelveli", "Tirupathur", "Tiruppur", "Tiruvallur", "Tiruvannamalai",
+  "Tiruvarur", "Vellore", "Viluppuram", "Virudhunagar"
 ];
 
 export const LOCAL_STOPS = [
-  "Parvathipuram", "Vadasery", "Anna Bus Stand", "Collectorate"
+  "Parvathipuram", "Vadasery", "Anna Bus Stand", "Collectorate", "Asaripallam", "Konam"
 ];
